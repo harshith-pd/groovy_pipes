@@ -3,7 +3,7 @@ pipeline {
 	stages{
 		stage("run files"){
 			steps{
-				jenkinsfile = fileLoader.load("*/Jenkinsfile")
+				fileLoader.load("hello_world/Jenkinsfile")
 			}
 		}
 	}

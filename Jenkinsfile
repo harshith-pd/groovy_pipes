@@ -1,6 +1,8 @@
 pipeline {
 	agent any 
-	pollSCM('* * * * *')
+    triggers {
+    	pollSCM('* * * * *')
+  	}
 	stages{
 		stage("run files"){
 			steps{

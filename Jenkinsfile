@@ -6,7 +6,9 @@ pipeline {
 	stages{
 		stage("run files"){
 			steps{
+				script{
 				fileLoader.load("hello_world/Jenkinsfile")
+				}
 			}
 		}
 	}

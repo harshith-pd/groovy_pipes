@@ -7,7 +7,8 @@ pipeline {
 		stage("run files"){
 			steps{
 				script{
-				fileLoader.load("hello_world/Jenkinsfile")
+				jenkins_file = fileLoader.load("hello_world/Jenkinsfile")
+				jenkins_file.start()
 				}
 			}
 		}

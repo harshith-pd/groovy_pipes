@@ -1,5 +1,5 @@
 node{
-	stage('building hello world'){
+	stage('building parallel'){
 		sh "echo hello"
 	}
 }

@@ -11,8 +11,12 @@ pipeline {
 		stage("run files"){
 			steps{
 				script{
-					jenkins_file = fileLoader.load("hello_world/Jenkinsfile")
-					//jenkins_file.start()
+					sh "ls */*.groovy > ${WORKSPACE}/groovy_file_list"
+					def files = readFile("${WORKSPACE}/groovy_file_list").split("\\r?\\n")
+					files.each {
+						file ->
+						jenkins_file = fileLoader.load(file)
+					} 
 				}
 			}
 			post {

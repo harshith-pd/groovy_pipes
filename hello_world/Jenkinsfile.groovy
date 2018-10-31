@@ -3,3 +3,4 @@ node{
 	sh "echo hello"
 }
 }
+return this

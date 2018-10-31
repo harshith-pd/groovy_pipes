@@ -3,6 +3,10 @@ pipeline {
     triggers {
     	pollSCM('* * * * *')
   	}
+  	options{
+  	    buildDiscarder(logRotator(numToKeepStr: '3', artifactNumToKeepStr: '3'))
+  	}
+
 	stages{
 		stage("run files"){
 			steps{

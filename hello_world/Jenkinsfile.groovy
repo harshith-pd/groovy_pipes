@@ -1,6 +1,6 @@
 node{
 	stage('build'){
-	sh "echo hello"
-}
+		sh "echo hello"
+	}
 }
 return this

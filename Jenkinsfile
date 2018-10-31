@@ -23,6 +23,9 @@ pipeline {
 				always{
 					archiveArtifacts artifacts: "**/*"
 				}
+				success{
+					sh "git tag Working - ${BUILD_NUMBER}"
+				}
 			}
 		}
 	}

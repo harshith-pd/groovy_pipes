@@ -1,6 +1,12 @@
 node{
 	stage('building conditional'){
-		sh "echo hello"
+		agent any
+		when {
+			branch 'master'
+		}
+		steps{
+			sh "echo hello"
+		}
 	}
 }
 return this
